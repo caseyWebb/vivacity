@@ -1,5 +1,5 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap container p-6 lg:px-0 mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
+<div class="{{ 'lg:fixed' if path == 'home' }} w-full bg-white/90 -rotate-1 pt-20 -mt-20">
+    <nav class="rotate-1 flex items-center justify-center lg:justify-between flex-wrap container p-6 lg:px-0 mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
         <!--Logo etc-->
         <img src="/static/img/logo.png" alt="VivaCity Logo" class="max-h-16 mt-3">
 
@@ -16,7 +16,7 @@
             <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                 {% for item in navigation.items %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        <a @click="isOpen = false" class="text-ml inline-block no-underline lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                 {% endfor %}
 
@@ -25,8 +25,7 @@
                 </li>
             </ul>
         </div>
-
     </nav>
-    <div class="-rotate-1 border-b-8 border-amber-600 w-screen"></div>
-    <div class="-rotate-1 border-t-8 border-green-600 w-screen"></div>
+    <div class="border-b-8 border-amber-600 w-[101vw] relative -left-2"></div>
+    <div class="border-t-8 border-green-600 w-[101vw] relative -left-2"></div>
 </div>
