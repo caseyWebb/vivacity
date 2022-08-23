@@ -1,10 +1,10 @@
 ---
 items:
-  - text: Menu One
+  - text: Produce Packs
     url: "#"
-  - text: Menu Two
+  - text: Plants
     url: "#"
-  - text: Menu Three
+  - text: Garden Design
     url: "#"
-  - text: Blog
+  - text: Events
     url: "/blog"
