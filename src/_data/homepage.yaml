@@ -1,0 +1,71 @@
+---
+hero:
+  headingDesktop: |
+    We did the
+    shopping
+    for you.
+
+    We've got
+    your weekly
+    organic produce
+    pack waiting.
+
+  headingMobile: |
+    We did the
+    shopping
+    for you.
+
+  button:
+    text: Get Started
+    url: /signup
+
+sectionOne:
+  heading: Easy to eat better
+  items:
+    - heading: We grow it
+      text: No poaisons or pesticides in our truly organically grown produce
+      image: /static/img/grow.jpg
+    - heading: We gather it
+      text: Skip the shoppingand checkout line and let us do the work
+      image: /static/img/gather.jpg
+    - heading: You grab it
+      text: No more stressing and rushing with our super flexible pick up times
+      image: /static/img/grab.jpg
+
+sectionTwo:
+  heading: Better food, Better life
+  items:
+    - heading: Seasonal produce tastes better
+      text: Fruits and vegetables are naturally more flavorful when eaten in season
+    - heading: No toxic chemicals
+      text: We source our produce from trusted organic farms so you can eat worry free
+    - heading: Seasonal eating is better for you
+      text: Rotate your diet by eating produce in season and gain a greater variety of nutrition
+    - heading: Ripe harvested
+      text: We allow our produce to ripen naturally so it contains higher levels of vitamins, minerals, and antioxidants
+
+sectionThree:
+  heading: More convenient for you
+  items:
+    - heading: Extended pick up times
+      text: Most CSAs have a short pick up window, but we allow you to pick up over the course of 2 days
+    - heading: Skip a week
+      text: If you're out of town, too busy to cook, or need to skip a week for any reason we make it easy to put your produce pack on hold
+    - heading: Make a meal
+      text: Add free-range chicken and eggs, grass-fed beef, whole-wheat bread, and other staples to your order
+
+sectionFour:
+  heading: Growing food and community
+  text: "When you enroll you are:"
+  items:
+    - "Supporting community agriculture"
+    - "Building the local food network"
+    - "Reducing food scarcity in your city"
+
+testimonials:
+  - author: Diane Valesco
+    quote: I love not having to stress about showing up at exactly 7:30 am on Saturdays to pick up my CSA. This is one of the few that will allow you to pick up throughout the day.
+  - author: Jade James
+    quote: Super helpful and patient with a newbie like me! Really appreciate y'all!
+  - author: Casey Webb
+    quote: Good veggies, good people.

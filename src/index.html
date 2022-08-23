@@ -8,58 +8,32 @@ path: home
   <div
     class="container flex flex-row 2xl:flex-col justify-between 2xl:justify-center items-center 2xl:items-baseline gap-10 h-full py-12 md:pt-16 lg:pt-32 text-white"
   >
-<pre><h1 class="text-left lg:pt-[100px] text-4xl sm:text-5xl xl:text-7xl text-shadow">We did the
-shopping
-for you!<span class="hidden md:inline">
-
-We've got
-your weekly
-organic produce
-pack waiting.
-</span>
-</h1></pre>
+<pre><h1 class="text-left lg:pt-[100px] text-4xl sm:text-5xl xl:text-7xl text-shadow"><span class="hidden md:inline">{{ homepage.hero.headingDesktop }}</span><span class="md:hidden">{{ homepage.hero.headingMobile }}</span></h1></pre>
     <a
-      href=""
+      href="{{ homepage.hero.button.url }}"
       class="font-bold uppercase rounded-xl bg-red-600 text-serif text-white text-xl sm:text-2xl xl:text-4xl px-6 py-4 w-76 text-center shadow-md shadow-black"
       >
-        Get Started
+        {{ homepage.hero.button.text }}
     </a>
   </div>
 </div>
 
 <section class="container mx-auto px-5">
   <h1 class="text-6xl font-bold text-green-800 lowercase my-20">
-    Easy To Eat Better
+    {{ homepage.sectionOne.heading }}
   </h1>
   <div class="flex flex-col lg:flex-row justify-center items-center gap-20">
+    {% for item in homepage.sectionOne.items %}
     <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
-      <img src="/static/img/grow.jpg" class="max-w-[25vw]" />
+      <img src="{{ item.image }}" class="max-w-[25vw]" />
       <div class="text-center">
-        <h2 class="text-4xl lg:text-5xl lowercase mb-5 font-bold text-teal-700">We Grow It</h2>
+        <h2 class="text-4xl lg:text-5xl lowercase mb-5 font-bold text-teal-700">{{ item.heading }}</h2>
         <p class="text-xl lg:text-2xl">
-          No poisons or pesticides in our truly organically grown produce
+          {{ item.text }} 
         </p>
       </div>
     </div>
-    <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
-      <img src="/static/img/gather.jpg" class="max-w-[25vw]" />
-      <div class="text-center">
-        <h2 class="text-4xl lg:text-5xl lowercase mb-5 font-bold text-teal-700">We Gather It</h2>
-        <p class="text-xl lg:text-2xl">
-          Skip the shopping and checkout line because we bundle it for you
-        </p>
-        <p></p>
-      </div>
-    </div>
-    <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
-      <img src="/static/img/grab.jpg" class="max-w-[25vw]" />
-      <div class="text-center">
-        <h2 class="text-4xl lg:text-5xl lowercase mb-5 font-bold text-teal-700">You Grab It</h2>
-        <p class="text-xl lg:text-2xl">
-          No more stressing and rushing with our super flexible pick up times
-        </p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -67,7 +41,7 @@ pack waiting.
   <div
     class="my-20 flex flex-col lg:flex-row justify-between items-center gap-20"
   >
-    <h1 class="text-6xl font-bold text-green-800 lowercase">Better Food, Better Life</h1>
+    <h1 class="text-6xl font-bold text-green-800 lowercase">{{ homepage.sectionTwo.heading }}</h1>
     <img
       src="https://via.placeholder.com/1920x1080"
       alt=""
@@ -81,47 +55,35 @@ pack waiting.
     />
     <div class="grid lg:grid-rows-2 lg:grid-cols-2 gap-y-12 lg:gap-y-56">
       <div class="pr-[30%] flex flex-col justify-end 2xl:ml-28">
-        <h2
-          class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5"
-        >
-          Seasonal produce tastes better
+        <h2 class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5">
+          {{ homepage.sectionTwo.items[0].heading }}
         </h2>
         <p class="text-2xl max-w-md">
-          Fruits and vegetables are naturally more flavorful when eaten in
-          season.
+          {{ homepage.sectionTwo.items[0].text }}
         </p>
       </div>
       <div class="pl-[30%] flex flex-col justify-end">
-        <h2
-          class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5"
-        >
-          No toxic chemicals
+        <h2 class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5">
+          {{ homepage.sectionTwo.items[1].heading }}
         </h2>
         <p class="text-2xl">
-          We source our produce from trusted organic farms so you can eat worry
-          free
+          {{ homepage.sectionTwo.items[1].text }}
         </p>
       </div>
       <div class="pr-[30%] 2xl:ml-28">
-        <h2
-          class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5"
-        >
-          Seasonal eating is better for you
+        <h2 class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5">
+          {{ homepage.sectionTwo.items[2].heading }}
         </h2>
         <p class="text-2xl">
-          Rotate your diet by eating produce in season and gain a greater
-          variety of nutrition
+          {{ homepage.sectionTwo.items[2].text }}
         </p>
       </div>
       <div class="pl-[30%]">
-        <h2
-          class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5"
-        >
-          Ripe harvested
+        <h2 class="text-teal-700 text-5xl font-bold lowercase leading-tight mb-5">
+          {{ homepage.sectionTwo.items[3].heading }}
         </h2>
         <p class="text-2xl">
-          We allow our produce to ripen naturally so it contains higher levels
-          of vitamins, minerals, and antioxidants
+          {{ homepage.sectionTwo.items[3].text }}
         </p>
       </div>
     </div>
@@ -130,58 +92,43 @@ pack waiting.
 
 <section class="bg-sky-50 mt-20 pb-20">
   <h1 class="text-6xl font-bold text-green-800 lowercase py-20">
-    More convenient <span class="hidden lg:inline">for you</span>
+    {{ homepage.sectionThree.heading }}
   </h1>
   <ul
     class="flex flex-col gap-10 items-center"
     style="list-style-image: url('https://via.placeholder.com/25')"
   >
+    {% for item in homepage.sectionThree.items %}
     <li class="max-w-xl pl-10">
-      <h2 class="text-5xl lowercase mb-5 text-teal-700 font-bold">Extended pick up times</h2>
+      <h2 class="text-5xl lowercase mb-5 text-teal-700 font-bold">
+        {{ item.heading }}
+      </h2>
       <p class="text-2xl">
-        Most CSAs have a short pick up window, but we allow you to pick up over
-        the course of 2 days
+        {{ item.text}}
       </p>
     </li>
-    <li class="max-w-xl pl-10">
-      <h2 class="text-5xl lowercase mb-5 text-teal-700 font-bold">Skip a week</h2>
-      <p class="text-2xl">
-        If you're out of town, too busy to cook, or need to skip a week for any
-        reason we make it easy to put your produce pack on hold
-      </p>
-    </li>
-    <li class="max-w-xl pl-10">
-      <h2 class="text-5xl lowercase mb-5 text-teal-700 font-bold">Make a meal</h2>
-      <p class="text-2xl">
-        Add free-range chicken and eggs, grass-fed beef, whole-wheat bread, and
-        other staples to your order
-      </p>
-    </li>
+    {% endfor %}
   </ul>
 </section>
 
-<section class="container max-w-7xl mx-auto px-5 py-20 relative overflow-x-hidden lg:pb-56">
-  <img src="/static/img/tree.png" alt="" class="absolute opacity-10 lg:opacity-100 -right-20 xl:right-0 top-0 lg:top-64 lg:max-w-[50%]">
-  <h1 class="text-6xl leading-tight lg:w-auto font-bold text-green-800 lowercase mb-10">Growing food and community</h1>
+<section class="container max-w-7xl mx-auto px-5 py-20 relative overflow-x-hidden lg:pb-72">
+  <img src="/static/img/tree.png" alt="" class="absolute opacity-10 lg:opacity-100 -right-20 xl:right-0 top-0 lg:top-64">
+  <h1 class="text-6xl leading-tight lg:w-auto font-bold text-green-800 lowercase mb-10">{{ homepage.sectionFour.heading }}</h1>
   <p class="text-center text-4xl lg:text-5xl lowercase">
-    When you enroll you are:
+    {{ homepage.sectionFour.text }}
     <ul class="font-bold text-4xl lg:text-5xl lowercase text-teal-700 flex flex-col gap-20 mt-20">
+      {% for item in homepage.sectionFour.items %}
       <li>
-        Supporting community agriculture
+        {{ item }}
       </li>
-      <li>
-        Building the local food network
-      </li>
-      <li>
-        Reducing food scarcity in your city
-      </li>
+      {% endfor %}
     </ul>
   </p>
 </section>
 
 <section class="bg-amber-500 py-20 px-5">
   <div class="grid lg:grid-cols-3 gap-20 container mx-auto">
-    {% for testimonial in testimonials %}
+    {% for testimonial in homepage.testimonials %}
     <figure class="flex flex-col gap-10 items-center justify-between">
       <blockquote class="text-2xl text-center grow flex items-center">
         {{ testimonial.quote }}
