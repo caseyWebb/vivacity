@@ -1,9 +1,7 @@
 <div class="{{ 'lg:fixed' if path == 'home' }} w-full bg-white/90 -rotate-1 pt-20 -mt-20">
     <nav class="rotate-1 flex items-center justify-center lg:justify-between flex-wrap container p-6 lg:px-0 mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
-        <img src="/static/img/logo.png" alt="VivaCity Logo" class="max-h-16 mt-3">
+        <a href="/" aria-label="Homepage Link"><img src="/static/img/logo.png" alt="VivaCity Logo" class="max-h-16 mt-3"></a>
 
-        <!--Toggle button (hidden on large screens)-->
         <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
             <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
                 <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
@@ -11,17 +9,16 @@
             </svg>
         </button>
 
-        <!--Menu-->
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
             <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                 {% for item in navigation.items %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block no-underline lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        <a @click="isOpen = false" class="text-ml inline-block no-underline text-serif lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                 {% endfor %}
 
                 <li class="nav__item ml-10">
-                    <a @click="isOpen = false" class="bg-teal-700 lg:text-xl xl:text-2xl px-6 py-4 text-white rounded-xl" href="">Sign Up</a>
+                    <a @click="isOpen = false" class="bg-teal-700 text-serif lg:text-xl xl:text-2xl px-6 py-4 text-white rounded-xl" href="">Sign Up</a>
                 </li>
             </ul>
         </div>

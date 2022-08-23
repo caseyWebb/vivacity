@@ -5,12 +5,43 @@ path: home
 ---
 
 <div class="bg-[url('/static/img/hero_bg.png')] bg-cover aspect-video px-5">
-  <div class="container flex flex-row 2xl:flex-col justify-between 2xl:justify-center items-center 2xl:items-baseline gap-10 h-full py-12 text-white">
+  <div
+    class="container flex flex-row 2xl:flex-col justify-between 2xl:justify-center items-center 2xl:items-baseline gap-10 h-full py-12 text-white"
+  >
     <pre><h1 class="text-left lg:pt-[100px] text-lg sm:text-2xl md:text-4xl lg:text-4xl xl:text-7xl">{{ homepage.heroText }}</h1></pre>
-    <a href="" class="rounded-xl bg-red-600 text-white text-2xl xl:text-4xl px-6 py-4 w-72 text-center">Get Started</a>
+    <a
+      href=""
+      class="rounded-xl bg-red-600 text-serif text-white text-2xl xl:text-4xl px-6 py-4 w-72 text-center"
+      >Get Started</a
+    >
   </div>
 </div>
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center" style="clip-path: polygon()">
-  {% include "./_includes/partials/content.html" %}
+<div class="container mx-auto px-5">
+  <section>
+    <h1 class="font-bold text-teal-700 lowercase my-20">Easy To Eat Better</h1>
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-20">
+      <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
+        <img src="/static/img/grow.jpg" class="max-w-[25vw]"/>
+        <div class="text-center">
+          <h2 class="text-4xl lg:text-5xl lowercase mb-5">We Grow It</h2>
+          <p class="text-xl lg:text-2xl">No poisons or pesticides in our truly organically grown produce</p>
+        </div>
+      </div>
+      <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
+        <img src="/static/img/gather.jpg" class="max-w-[25vw]"/>
+        <div class="text-center">
+          <h2 class="text-4xl lg:text-5xl lowercase mb-5">We Gather It</h2>
+          <p class="text-xl lg:text-2xl">Skip the shopping and checkout line becaupse we bundle it for you<p>
+        </div>
+      </div>
+      <div class="flex flex-row lg:flex-col justify-center items-center gap-10">
+        <img src="/static/img/grab.jpg" class="max-w-[25vw]"/>
+        <div class="text-center">
+          <h2 class="text-4xl lg:text-5xl lowercase mb-5">You Grab It</h2>
+          <p class="text-xl lg:text-2xl">No more stressing and rushing with our super flexible pick up times</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
