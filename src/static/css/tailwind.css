@@ -6,6 +6,10 @@ h1, .text-serif {
   font-family: "Playfair Display", serif;
 }
 
+.text-shadow {
+  text-shadow: 2px 2px 1px #000000;
+}
+
 .smallcaps {
   font-variant: small-caps;
   text-transform: lowercase;
