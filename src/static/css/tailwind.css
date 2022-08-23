@@ -6,6 +6,11 @@ h1, .text-serif {
   font-family: "Playfair Display", serif;
 }
 
+.smallcaps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }

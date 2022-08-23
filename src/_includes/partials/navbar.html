@@ -13,12 +13,12 @@
             <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                 {% for item in navigation.items %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block no-underline text-serif lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        <a @click="isOpen = false" class="text-ml lowercase inline-block no-underline text-serif lg:text-xl xl:text-2xl font-bold hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                 {% endfor %}
 
                 <li class="nav__item ml-10">
-                    <a @click="isOpen = false" class="bg-teal-700 text-serif lg:text-xl xl:text-2xl px-6 py-4 text-white rounded-xl" href="">Sign Up</a>
+                    <a @click="isOpen = false" class="bg-teal-700 font-bold smallcaps text-serif lg:text-xl xl:text-2xl px-8 py-4 text-white rounded-xl" href="">Sign Up</a>
                 </li>
             </ul>
         </div>
