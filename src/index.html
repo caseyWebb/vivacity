@@ -180,30 +180,16 @@ pack waiting.
 </section>
 
 <section class="bg-amber-500 py-20 px-5">
-  <div class="flex flex-col lg:flex-row gap-20 container mx-auto">
-    <figure class="flex flex-col gap-10 items-center">
-      <blockquote class="text-2xl text-center">
-        I love not having to stress about showing at exactly 7:30am on Saturdays to pick up my CSA. This is one of the few that will allow you to pick up throughout the day.
+  <div class="grid lg:grid-cols-3 gap-20 container mx-auto">
+    {% for testimonial in testimonials %}
+    <figure class="flex flex-col gap-10 items-center justify-between">
+      <blockquote class="text-2xl text-center grow flex items-center">
+        {{ testimonial.quote }}
       </blockquote>
       <figcaption class="flex flex-row items-center gap-10">
-        <img src="https://via.placeholder.com/125" class="rounded-full"> <cite class="font-bold text-2xl">Diane Valesco</cite>
+        <img src="https://via.placeholder.com/125" class="rounded-full"> <cite class="font-bold text-2xl">{{ testimonial.author }}</cite>
       </figcaption>
     </figure>
-    <figure class="flex flex-col gap-10 items-center">
-      <blockquote class="text-2xl text-center">
-        Super helpful and patient wient a newbie like me! Really appreciate y'all!
-      </blockquote>
-      <figcaption class="flex flex-row items-center gap-10">
-        <img src="https://via.placeholder.com/125" class="rounded-full"> <cite class="-order-1 font-bold text-2xl">Jade James</cite>
-      </figcaption>
-    </figure>
-    <figure class="flex flex-col gap-10 items-center">
-      <blockquote class="text-2xl text-center">
-        Good veggies, good people.
-      </blockquote>
-      <figcaption class="flex flex-row items-center gap-10">
-        <img src="https://via.placeholder.com/125" class="rounded-full"> <cite class="font-bold text-2xl">Casey Webb</cite>
-      </figcaption>
-    </figure>
+    {% endfor %}
   </div>
 </section>
